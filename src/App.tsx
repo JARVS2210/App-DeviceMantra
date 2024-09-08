@@ -3,11 +3,16 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
+import Ionicons from "react-native-vector-icons/Ionicons"
+
 import HomeScreen from './screens/HomeScreen';
 import SearchScreen from './screens/SearchScreen';
 import GPTScreen from './screens/GPTScreen';
 import ServicesOfferedScreen from './screens/ServicesOfferedScreen';
 import AccountScreen from './screens/AccountScreen';
+
+import Colors from './constants/Colors'
 
 // Initialize bottom tab
 const Tab = createBottomTabNavigator();
@@ -15,12 +20,36 @@ const Tab = createBottomTabNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name='Home' component={HomeScreen}/>
-        <Tab.Screen name='Search' component={SearchScreen}/>
-        <Tab.Screen name='GPT' component={GPTScreen}/>
-        <Tab.Screen name='Services' component={ServicesOfferedScreen}/>
-        <Tab.Screen name='Account' component={AccountScreen}/>
+      <Tab.Navigator screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: Colors.primary,
+        tabBarInactiveTintColor: Colors.darkGray
+      }}>
+        <Tab.Screen name='Home' component={HomeScreen} options={{
+          tabBarIcon: ({size,focused,color}) => {
+            return <Ionicons name={focused?'home':'home-outline'} size={size} color={color}/>
+          }
+        }}/>
+        <Tab.Screen name='Search' component={SearchScreen} options={{
+          tabBarIcon: ({size, color, focused}) => {
+            return <Ionicons name={focused?'search':'search-outline'} size={size} color={color}/>
+          }
+        }}/>
+        <Tab.Screen name='GPT' component={GPTScreen} options={{
+          tabBarIcon: ({size, color, focused}) => {
+            return <MaterialCommunityIcons name={focused?'message-question':'message-question-outline'} size={size} color={color}/>
+          }
+        }}/>
+        <Tab.Screen name='Services' component={ServicesOfferedScreen}options={{
+          tabBarIcon: ({size, color, focused}) => {
+            return <MaterialCommunityIcons name={focused?'hand-coin':'hand-coin-outline'} size={size} color={color}/>
+          }
+        }}/>
+        <Tab.Screen name='Account' component={AccountScreen}options={{
+          tabBarIcon: ({size, color, focused}) => {
+            return <MaterialCommunityIcons name={focused?'account-circle':'account-circle-outline'} size={size} color={color}/>
+          }
+        }}/>
       </Tab.Navigator>
     </NavigationContainer>
   )
