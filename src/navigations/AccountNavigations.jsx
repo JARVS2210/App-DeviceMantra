@@ -9,8 +9,8 @@ import SavedCards from '../components/account/authenticated/SavedCards';
 import SavedAddresses from '../components/account/authenticated/SavedAddresses';
 import AccountDetails from '../components/account/authenticated/AccountDetails';
 
-// initialize the stack
-const Stack = createNativeStackNavigator();
+// initialize the stack and export to be used in another screen navigations
+export const Stack = createNativeStackNavigator();
 
 const AccountNavigations = () => {
   return (
@@ -24,8 +24,7 @@ const AccountNavigations = () => {
         <Stack.Screen name="EditProfile" component={EditProfile} />
         <Stack.Screen name="SavedCards" component={SavedCards} />
         <Stack.Screen name="SavedAddresses" component={SavedAddresses} />
-
-      </Stack.Navigator>
+    </Stack.Navigator>
   )
 }
 

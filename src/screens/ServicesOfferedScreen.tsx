@@ -5,11 +5,9 @@ import Colors from '../constants/Colors'
 
 const ServicesOfferedScreen = () => {
   return (
-    <LinearGradient style={styles.container} colors={Colors.servicesOfferedScreenGradientBackground}>
-      <View>
-        <Text>ServicesOfferedScreen</Text>
-      </View>
-    </LinearGradient>
+    <View>
+      <Text>ServicesOfferedScreen</Text>
+    </View>
   )
 }
 

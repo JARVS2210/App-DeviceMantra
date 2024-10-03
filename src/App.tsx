@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StatusBar, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
@@ -20,13 +20,14 @@ const Tab = createBottomTabNavigator();
 const App = () => {
   return (
     <NavigationContainer>
+      <StatusBar translucent backgroundColor="transparent"/>
       <Tab.Navigator screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: Colors.primary,
         tabBarInactiveTintColor: Colors.darkGray
       }}>
         <Tab.Screen name='Home' component={HomeScreen} options={{
-          tabBarIcon: ({size,focused,color}) => {
+          tabBarIcon: ({size, focused, color}) => {
             return <Ionicons name={focused?'home':'home-outline'} size={size} color={color}/>
           }
         }}/>
