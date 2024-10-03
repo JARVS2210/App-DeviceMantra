@@ -10,9 +10,11 @@ export default {
     warning: "#bfbf22",
     danger: "#b52012",
     blue: "#4285F4",
-    homeScreenGradientBackground: ["#f2fcfc", "#e1f8fa"],
+    love: '#ff0a04',
+    // homeScreenGradientBackground: ["#f2fcfc", "#e1f8fa"],
+    homeScreenGradientBackground: ["#b2f5ff", "#f4ffcf"],
     searchScreenGradientBackground: ["#f8faf5", "#effadc"],
     GPTScreenGradientBackground: ["#f5f6fa", "#dae1f5"],
     servicesOfferedScreenGradientBackground: ["#fcf5fc","#f4daf5"],
-    accountScreenGradientBackground: ["#fcf6f5", "#fae6e1"]
+    accountScreenGradientBackground: ["#fcf6f5", "#fae6e1"],
 }
