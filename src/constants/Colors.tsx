@@ -15,6 +15,6 @@ export default {
     homeScreenGradientBackground: ["#b2f5ff", "#f4ffcf"],
     searchScreenGradientBackground: ["#f8faf5", "#effadc"],
     GPTScreenGradientBackground: ["#f5f6fa", "#dae1f5"],
-    servicesOfferedScreenGradientBackground: ["#fcf5fc","#f4daf5"],
+    servicesOfferedScreenGradientBackground: ["#c8e0ff","#fad1ff"],
     accountScreenGradientBackground: ["#fcf6f5", "#fae6e1"],
 }

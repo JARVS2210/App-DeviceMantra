@@ -1,12 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import LinearGradient from 'react-native-linear-gradient'
-import Colors from '../constants/Colors'
+import ServicesNavigations from '../../navigations/DeviceMantra/ServicesNavigations'
 
 const ServicesOfferedScreen = () => {
   return (
-    <View>
-      <Text>ServicesOfferedScreen</Text>
+    <View style={styles.container}>
+      <ServicesNavigations></ServicesNavigations>
     </View>
   )
 }

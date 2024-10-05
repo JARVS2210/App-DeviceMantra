@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, Image, Dimensions } from 'react-native'
-import React from 'react'
+import React, {memo} from 'react'
 import ImageCarousel from '../../../interfaces/ImageCarouselType'
 import LinearGradient from 'react-native-linear-gradient'
 import Colors from '../../../constants/Colors'
@@ -51,7 +51,7 @@ const SliderItem = ({item, index, scrollX}: props) => {
   )
 }
 
-export default SliderItem
+export default memo(SliderItem)
 
 const styles = StyleSheet.create({
   SliderContainer:{

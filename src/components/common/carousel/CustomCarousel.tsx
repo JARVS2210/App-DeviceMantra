@@ -56,7 +56,7 @@ const CustomCarousel = ({itemList}: props) => {
 
   //pagination config
   const onViewableItemsChanged = ({viewableItems}: {viewableItems: ViewToken[]}) => {
-    if (viewableItems[0].index !== undefined && viewableItems[0].index !== null) {
+    if (viewableItems[0] !== undefined && viewableItems[0].index !== undefined && viewableItems[0].index !== null) {
       setPaginationIndex(viewableItems[0].index % itemList.length); // on reaching the end it should get the proper index on next loop
     }
   };

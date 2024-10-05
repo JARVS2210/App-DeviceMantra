@@ -6,10 +6,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
 import Ionicons from "react-native-vector-icons/Ionicons"
 
-import HomeScreen from './screens/HomeScreen';
-import SearchScreen from './screens/SearchScreen';
-import GPTScreen from './screens/GPTScreen';
-import ServicesOfferedScreen from './screens/ServicesOfferedScreen';
+import HomeScreen from './screens/DeviceMantra/HomeScreen';
+import SearchScreen from './screens/DeviceMantra/SearchScreen';
+import GPTScreen from './screens/DeviceMantra/GPTScreen';
+import ServicesOfferedScreen from './screens/DeviceMantra/ServicesOfferedScreen';
 import AccountScreen from './screens/AccountScreen';
 
 import Colors from './constants/Colors'
@@ -20,7 +20,7 @@ const Tab = createBottomTabNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <StatusBar translucent backgroundColor="transparent"/>
+      <StatusBar translucent backgroundColor="transparent" barStyle={'dark-content'}/>
       <Tab.Navigator screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: Colors.primary,
