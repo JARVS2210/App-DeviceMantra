@@ -1,24 +1,21 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-import Home from '../components/home/Home'
-
 // import Stack declared in AccountNavigations
-import { Stack } from './AccountNavigations'
-import BecomeACertifiedTechnician from '../components/home/BecomeACertifiedTechnician'
-import BookATechnician from '../components/home/BookATechnician'
-import BuyNewElectronics  from '../components/home/BuyNewElectronics'
-import BuyRefurbishedElectronics from '../components/home/BuyRefurbishedElectronics'
-import GetDeviceRepaired from '../components/home/GetDeviceRepaired'
-import GetSolutionWithAI from '../components/home/GetSolutionWithAI'
+import { Stack } from '../AccountNavigations'
+import HomePage from '../../components/DeviceMantra/home/HomePage'
+import BookATechnician from '../../components/DeviceMantra/home/BookATechnician'
+import BuyNewElectronics from '../../components/DeviceMantra/home/BuyNewElectronics'
+import BuyRefurbishedElectronics from '../../components/DeviceMantra/home/BuyRefurbishedElectronics'
+import GetDeviceRepaired from '../../components/DeviceMantra/home/GetDeviceRepaired'
+import GetSolutionWithAI from '../../components/DeviceMantra/home/GetSolutionWithAI'
 
 const HomeNavigations = () => {
   return (
     <Stack.Navigator screenOptions={{
         headerShown: false
       }} initialRouteName='Home'>
-      <Stack.Screen name='Home' component={Home}></Stack.Screen>
-      <Stack.Screen name="BecomeACertifiedTechnician" component={BecomeACertifiedTechnician}></Stack.Screen>
+      <Stack.Screen name='HomePage' component={HomePage}></Stack.Screen>
       <Stack.Screen name="BookATechnician" component={BookATechnician}></Stack.Screen>
       <Stack.Screen name="BuyNewElectronics" component={BuyNewElectronics}></Stack.Screen>
       <Stack.Screen name="BuyRefurbishedElectronics" component={BuyRefurbishedElectronics}></Stack.Screen>

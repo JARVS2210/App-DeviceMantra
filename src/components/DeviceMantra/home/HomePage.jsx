@@ -1,20 +1,20 @@
 import { StyleSheet, Text, View, Dimensions, Image, ScrollView, Platform, StatusBar} from 'react-native'
 import React from 'react'
-import CustomCarousel from '../common/carousel/CustomCarousel'
+import CustomCarousel from '../../common/carousel/CustomCarousel'
 
 //import the fetched data from service
-import { imageCarouselData } from '../../services/home/FetchImageCarousel'
+import { imageCarouselData } from '../../../services/home/FetchImageCarousel'
 import LinearGradient from 'react-native-linear-gradient'
-import Colors from '../../constants/Colors'
+import Colors from '../../../constants/Colors'
 import LookingForWhatList from './LookingForWhatList'
 
 
-const Home = ({navigation}) => {
+const HomePage = ({navigation}) => {
   return (
     <ScrollView>
         <LinearGradient colors={Colors.homeScreenGradientBackground}>
             <View style={styles.brandContainer}>
-                <Image source={require("../../assets/images/logo/logo-no-background.png")} style={styles.logoImage}/>
+                <Image source={require("../../../assets/images/logo/logo-no-background.png")} style={styles.logoImage}/>
                 <Text style={styles.brandName}>DeviceMantra</Text>
             </View>
             <View style={styles.carouselContainer}>
@@ -28,15 +28,14 @@ const Home = ({navigation}) => {
     );
 }
 
-export default Home
+export default HomePage
 
 const styles = StyleSheet.create({
     brandContainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        padding: 20,
+        padding: 15,
         paddingTop: 60,
-        marginLeft: 10,
     },
     brandName: {
         fontSize: 25,
@@ -58,7 +57,7 @@ const styles = StyleSheet.create({
    },
    textLookingFor: {
     color: Colors.black,
-    padding: 20,
+    padding: 10,
     fontSize: 20
    }
 })

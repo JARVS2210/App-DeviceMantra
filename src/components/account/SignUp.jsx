@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 25, 
         elevation: 10,
         shadowOffset: { width: 5, height: 5 },  
-        shadowColor: Colors.lightGray,  
+        shadowColor: Colors.darkGray,  
         shadowOpacity: 1,  
         zIndex:10, 
     },

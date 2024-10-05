@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
-import SimpleCard from '../common/cards/SimpleCard'
+import SimpleCard from '../../common/cards/SimpleCard'
 
 
 import AntDesign from 'react-native-vector-icons/AntDesign'
-import Colors from '../../constants/Colors'
+import Colors from '../../../constants/Colors'
 
 const LookingForWhatList = ({navigation}) => {
   return (
@@ -16,16 +16,26 @@ const LookingForWhatList = ({navigation}) => {
           style={styles.cardColumn}
         >
           <SimpleCard title={'Book A Technician'} 
-                      imagePath={require('../../assets/images/cards/technician.png')} 
-                      description={''}/>
+                      imagePath={require('../../../assets/images/cards/technician.png')} 
+                      description={''}
+                      isButtonEnabled={false}
+                      buttonName={""}
+                      navTarget={""} 
+                      navigation={navigation}
+          />
         </TouchableOpacity>
         <TouchableOpacity 
           onPress={() => navigation.navigate('GetDeviceRepaired')}
           style={styles.cardColumn}
         >
           <SimpleCard title={'Get Device Repaired'} 
-                      imagePath={require('../../assets/images/cards/get_device_repaired.png')} 
-                      description={''}/>
+                      imagePath={require('../../../assets/images/cards/get_device_repaired.png')} 
+                      description={''}
+                      isButtonEnabled={false}
+                      buttonName={""}
+                      navTarget={""} 
+                      navigation={navigation}
+          />
         </TouchableOpacity>
       </View>
       
@@ -36,8 +46,13 @@ const LookingForWhatList = ({navigation}) => {
           style={styles.cardColumn}
         >
           <SimpleCard title={'New Devices'} 
-                      imagePath={require('../../assets/images/cards/new_phones.png')} 
-                      description={''}/>
+                      imagePath={require('../../../assets/images/cards/new_phones.png')} 
+                      description={''}
+                      isButtonEnabled={false}
+                      buttonName={""}
+                      navTarget={""} 
+                      navigation={navigation}
+          />
         </TouchableOpacity>
         
         <TouchableOpacity 
@@ -45,8 +60,13 @@ const LookingForWhatList = ({navigation}) => {
           style={styles.cardColumn}
         >
           <SimpleCard title={'Refurbished Devices'} 
-                      imagePath={require('../../assets/images/cards/refurbished_phones.png')} 
-                      description={''}/>
+                      imagePath={require('../../../assets/images/cards/refurbished_phones.png')} 
+                      description={''}
+                      isButtonEnabled={false}
+                      buttonName={""}
+                      navTarget={""} 
+                      navigation={navigation}
+          />
         </TouchableOpacity>
       </View>
 
@@ -57,16 +77,26 @@ const LookingForWhatList = ({navigation}) => {
           style={styles.cardColumn}
         >
           <SimpleCard title={'Become A Certified Technician'} 
-                      imagePath={require('../../assets/images/cards/certified_technician.png')} 
-                      description={''}/>
+                      imagePath={require('../../../assets/images/cards/certified_technician.png')} 
+                      description={''}
+                      isButtonEnabled={false}
+                      buttonName={""}
+                      navTarget={""} 
+                      navigation={navigation}
+          />
         </TouchableOpacity>
         <TouchableOpacity 
           onPress={() => navigation.navigate('GetSolutionWithAI')}
           style={styles.cardColumn}
         >
           <SimpleCard title={'Get Repair Solution With AI'} 
-                      imagePath={require('../../assets/images/cards/solution_with_AI.png')} 
-                      description={''}/>
+                      imagePath={require('../../../assets/images/cards/solution_with_AI.png')} 
+                      description={''}
+                      isButtonEnabled={false}
+                      buttonName={""}
+                      navTarget={""} 
+                      navigation={navigation}    
+          />
         </TouchableOpacity>
       </View>
 
@@ -85,10 +115,11 @@ export default LookingForWhatList
 const styles = StyleSheet.create({
   cardRow: {
     flexDirection: 'row',
-    paddingVertical: 5
+    paddingHorizontal: 6
   },
   cardColumn: {
-    width: "50%"
+    width: "50%",
+    padding: 6
   },
   appMadeMessageContainer: {
     padding: 20,
