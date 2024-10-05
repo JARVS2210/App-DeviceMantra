@@ -12,6 +12,7 @@ export default {
     blue: "#4285F4",
     love: '#ff0a04',
     // homeScreenGradientBackground: ["#f2fcfc", "#e1f8fa"],
+    statusBarColor: "#e1e2ff",
     homeScreenGradientBackground: ["#b2f5ff", "#f4ffcf"],
     searchScreenGradientBackground: ["#f8faf5", "#effadc"],
     GPTScreenGradientBackground: ["#f5f6fa", "#dae1f5"],

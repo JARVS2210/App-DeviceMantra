@@ -13,10 +13,6 @@ const HomePage = ({navigation}) => {
   return (
     <ScrollView>
         <LinearGradient colors={Colors.homeScreenGradientBackground}>
-            <View style={styles.brandContainer}>
-                <Image source={require("../../../assets/images/logo/logo-no-background.png")} style={styles.logoImage}/>
-                <Text style={styles.brandName}>DeviceMantra</Text>
-            </View>
             <View style={styles.carouselContainer}>
                 <CustomCarousel itemList={imageCarouselData}/>
             </View>
@@ -31,24 +27,15 @@ const HomePage = ({navigation}) => {
 export default HomePage
 
 const styles = StyleSheet.create({
-    brandContainer: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        padding: 15,
-        paddingTop: 60,
-    },
     brandName: {
         fontSize: 25,
         fontFamily: "georgia",
         fontWeight: '400',
         color: Colors.black
     },
-    logoImage: {
-        height: 40,
-        width: 64
-    },
     carouselContainer: {
         flex: 1,
+        paddingTop: 10
     },
     lineStyle:{
     borderWidth: 0.5,
