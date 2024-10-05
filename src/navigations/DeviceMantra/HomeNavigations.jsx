@@ -14,7 +14,7 @@ const HomeNavigations = () => {
   return (
     <Stack.Navigator screenOptions={{
         headerShown: false
-      }} initialRouteName='Home'>
+      }} initialRouteName='HomePage'>
       <Stack.Screen name='HomePage' component={HomePage}></Stack.Screen>
       <Stack.Screen name="BookATechnician" component={BookATechnician}></Stack.Screen>
       <Stack.Screen name="BuyNewElectronics" component={BuyNewElectronics}></Stack.Screen>
